@@ -60,12 +60,12 @@ public class Main {
 
         // En las siguiente lineas se calcula la fila con mayor valor y cual es su valor
         int valorFilaMayor = 0;
-        int FilaMayor = 0;
+        int filaMayor = 0;
 
         for (int i = 0; i < vectorSumaFilas.length; i++) {
             if (vectorSumaFilas[i] > valorFilaMayor) {
                 valorFilaMayor = vectorSumaFilas[i];
-                FilaMayor = i;
+                filaMayor = i;
             }
         }
 
@@ -82,7 +82,7 @@ public class Main {
 
         System.out.println("------------------------------------------------");
 
-        System.out.println("La fila mas alta fue la fila " + FilaMayor + " con valor de " + valorFilaMayor);
+        System.out.println("La fila mas alta fue la fila " + filaMayor + " con valor de " + valorFilaMayor);
 
         System.out.println("------------------------------------------------");
 
