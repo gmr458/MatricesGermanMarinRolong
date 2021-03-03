@@ -21,31 +21,25 @@ public class Main {
         System.out.print("Digita la cantidad de columnas: ");
         int columnas = scanner.nextInt();
 
-        int[][] tabla = new int[filas][columnas]; // Tabla de 3 filas y 4 columnas
+        scanner.close();
 
-        int sumaTotal = 0; // Variable que contendra la suma total de la tabla de 3x4
+        int[][] tabla = new int[filas][columnas]; // Matriz
+
+        int sumaTotal = 0; // Variable que contendra la suma total de todas las posiciones de la matriz
 
         int[] vectorSumaFilas = new int[filas]; // En la primera posicion del vector estara la suma total de la primera fila
         // y asi se hara con las otras filas
 
-        // En el siguiente ciclo for dentro de otro ciclo for se llena la tabla 3x4 con numeros aleatorios
+        System.out.println("------------------------------------------------");
+
+        // En el siguiente ciclo for dentro de otro ciclo for se llena la matriz con numeros aleatorios,
+        // se imprimen los valores de la matriz y se obtiene la suma total de todas las posiciones de la matriz y
+        // la suma por cada fila
         for (int fila = 0; fila < tabla.length; fila++) {
 
             for (int columna = 0; columna < tabla[fila].length; columna++) {
 
                 tabla[fila][columna] = random.nextInt(limiteSuperior);
-
-            }
-
-        }
-
-        System.out.println("------------------------------------------------");
-
-        // En el siguiente ciclo for se imprimen los valores de la tabla 3x4 y se obtiene la suma total de la tabla,
-        // tambien se obtienen las sumas totales por fila
-        for (int fila = 0; fila < tabla.length; fila++) {
-
-            for (int columna = 0; columna < tabla[fila].length; columna++) {
 
                 System.out.println("Fila " + fila + ", Columna " + columna + ": " + tabla[fila][columna]);
 
