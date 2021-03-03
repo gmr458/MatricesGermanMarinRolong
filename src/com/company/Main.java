@@ -23,7 +23,7 @@ public class Main {
 
         scanner.close();
 
-        int[][] tabla = new int[filas][columnas]; // Matriz
+        int[][] matriz = new int[filas][columnas]; // Matriz
 
         int sumaTotal = 0; // Variable que contendra la suma total de todas las posiciones de la matriz
 
@@ -35,19 +35,19 @@ public class Main {
         // En el siguiente ciclo for dentro de otro ciclo for se llena la matriz con numeros aleatorios,
         // se imprimen los valores de la matriz y se obtiene la suma total de todas las posiciones de la matriz y
         // la suma por cada fila
-        for (int fila = 0; fila < tabla.length; fila++) {
+        for (int fila = 0; fila < matriz.length; fila++) {
 
-            for (int columna = 0; columna < tabla[fila].length; columna++) {
+            for (int columna = 0; columna < matriz[fila].length; columna++) {
 
-                tabla[fila][columna] = random.nextInt(limiteSuperior);
+                matriz[fila][columna] = random.nextInt(limiteSuperior);
 
-                System.out.println("Fila " + fila + ", Columna " + columna + ": " + tabla[fila][columna]);
+                System.out.println("Fila " + fila + ", Columna " + columna + ": " + matriz[fila][columna]);
 
                 // Suma de la fila actual
-                vectorSumaFilas[fila] += tabla[fila][columna];
+                vectorSumaFilas[fila] += matriz[fila][columna];
 
                 // Suma total de la matriz
-                sumaTotal += tabla[fila][columna];
+                sumaTotal += matriz[fila][columna];
 
             }
 
