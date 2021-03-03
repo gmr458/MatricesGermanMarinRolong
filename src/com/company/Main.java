@@ -60,10 +60,15 @@ public class Main {
         int filaMayor = 0;
 
         for (int i = 0; i < vectorSumaFilas.length; i++) {
+
             if (vectorSumaFilas[i] > valorFilaMayor) {
+
                 valorFilaMayor = vectorSumaFilas[i];
+
                 filaMayor = i;
+
             }
+
         }
 
         // De aqui en adelante se imprimen los resultados en consola
