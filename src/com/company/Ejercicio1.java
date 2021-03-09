@@ -53,27 +53,23 @@ public class Ejercicio1 {
         System.out.println("MATRIZ ORDENADA POR FILAS");
         System.out.println("------------------------------------------------");
 
-        for (int i = 0; i < filas; i++) {
+        for (int fila = 0; fila < filas; fila++) {
 
-            for (int j = 0; j < columnas; j++) {
+            for (int columna = 0; columna < columnas; columna++) {
 
-                for (int k = 0; k < filas; k++) {
+                int posicion = columna;
 
-                    for (int z = 0; z < columnas; z++) {
+                int auxiliar = matrizOrdenadaPorFilas[fila][columna];
 
-                        if (matrizOrdenadaPorFilas[k][z] > matrizOrdenadaPorFilas[i][j]) { // Por filas
+                while ((posicion > 0) && (matrizOrdenadaPorFilas[fila][posicion - 1] > auxiliar)) {
 
-                            int auxFilas = matrizOrdenadaPorFilas[i][j];
+                    matrizOrdenadaPorFilas[fila][posicion] = matrizOrdenadaPorFilas[fila][posicion - 1];
 
-                            matrizOrdenadaPorFilas[i][j] = matrizOrdenadaPorFilas[k][z];
-
-                            matrizOrdenadaPorFilas[k][z] = auxFilas;
-
-                        }
-
-                    }
+                    posicion--;
 
                 }
+
+                matrizOrdenadaPorFilas[fila][posicion] = auxiliar;
 
             }
 
@@ -95,27 +91,23 @@ public class Ejercicio1 {
         System.out.println("MATRIZ ORDENADA POR COLUMNAS");
         System.out.println("------------------------------------------------");
 
-        for (int i = 0; i < columnas; i++) {
+        for (int columna = 0; columna < columnas; columna++) {
 
-            for (int j = 0; j < filas; j++) {
+            for (int fila = 0; fila < filas; fila++) {
 
-                for (int k = 0; k < columnas; k++) {
+                int posicion = fila;
 
-                    for (int z = 0; z < filas; z++) {
+                int auxiliar = matrizOrdenadaPorColumnas[fila][columna];
 
-                        if (matrizOrdenadaPorColumnas[z][k] > matrizOrdenadaPorColumnas[j][i]) {
+                while ((posicion > 0) && (matrizOrdenadaPorColumnas[posicion - 1][columna] > auxiliar)) {
 
-                            int aux = matrizOrdenadaPorColumnas[j][i];
+                    matrizOrdenadaPorColumnas[posicion][columna] = matrizOrdenadaPorColumnas[posicion - 1][columna];
 
-                            matrizOrdenadaPorColumnas[j][i] = matrizOrdenadaPorColumnas[z][k];
-
-                            matrizOrdenadaPorColumnas[z][k] = aux;
-
-                        }
-
-                    }
+                    posicion--;
 
                 }
+
+                matrizOrdenadaPorColumnas[posicion][columna] = auxiliar;
 
             }
 

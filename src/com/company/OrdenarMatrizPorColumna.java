@@ -43,42 +43,38 @@ public class OrdenarMatrizPorColumna {
 
         }
 
-        System.out.println("------------------------------------------------");
+        // Algoritmo de ordenacion por cada columna
+        for (int columna = 0; columna < columnas; columna++) {
 
-        for (int i = 0; i < columnas; i++) {
+            for (int fila = 0; fila < filas; fila++) {
 
-            for (int j = 0; j < filas; j++) {
+                int posicion = fila;
 
-                for (int k = 0; k < columnas; k++) {
+                int auxiliar = matriz[fila][columna];
 
-                    for (int z = 0; z < filas; z++) {
+                while ((posicion > 0) && (matriz[posicion - 1][columna] > auxiliar)) {
 
-                        if (matriz[z][k] > matriz[j][i]) {
+                    matriz[posicion][columna] = matriz[posicion - 1][columna];
 
-                            int aux = matriz[j][i];
-
-                            matriz[j][i] = matriz[z][k];
-
-                            matriz[z][k] = aux;
-
-                        }
-
-                    }
+                    posicion--;
 
                 }
+
+                matriz[posicion][columna] = auxiliar;
 
             }
 
         }
 
-        System.out.println("MATRIZ ORDENADA");
+        System.out.println("------------------------------------------------");
+        System.out.println("MATRIZ ORDENADA POR CADA COLUMNA");
         System.out.println("------------------------------------------------");
 
-        for (int fila = 0; fila < matriz.length; fila++) {
+        for (int filac = 0; filac < filas; filac++) {
 
-            for (int columna = 0; columna < matriz[fila].length; columna++) {
+            for (int columna = 0; columna < columnas; columna++) {
 
-                System.out.print(matriz[fila][columna] + "   ");
+                System.out.print(matriz[filac][columna] + "   ");
 
             }
 

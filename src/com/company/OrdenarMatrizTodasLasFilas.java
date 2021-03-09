@@ -3,7 +3,7 @@ package com.company;
 import java.util.Random;
 import java.util.Scanner;
 
-public class OrdenarMatrizPorFila {
+public class OrdenarMatrizTodasLasFilas {
 
     public static void main(String[] args) {
 
@@ -43,38 +43,42 @@ public class OrdenarMatrizPorFila {
 
         }
 
-        // Algoritmo de ordenacion por cada fila
-        for (int fila = 0; fila < filas; fila++) {
+        System.out.println("------------------------------------------------");
 
-            for (int columna = 0; columna < columnas; columna++) {
+        for (int i = 0; i < filas; i++) {
 
-                int posicion = columna;
+            for (int j = 0; j < columnas; j++) {
 
-                int auxiliar = matriz[fila][columna];
+                for (int k = 0; k < filas; k++) {
 
-                while ((posicion > 0) && (matriz[fila][posicion - 1] > auxiliar)) {
+                    for (int z = 0; z < columnas; z++) {
 
-                    matriz[fila][posicion] = matriz[fila][posicion - 1];
+                        if (matriz[k][z] > matriz[i][j]) {
 
-                    posicion--;
+                            int aux = matriz[i][j];
+
+                            matriz[i][j] = matriz[k][z];
+
+                            matriz[k][z] = aux;
+
+                        }
+
+                    }
 
                 }
-
-                matriz[fila][posicion] = auxiliar;
 
             }
 
         }
 
+        System.out.println("MATRIZ ORDENADA");
         System.out.println("------------------------------------------------");
-        System.out.println("MATRIZ ORDENADA POR CADA FILA");
-        System.out.println("------------------------------------------------");
 
-        for (int filac = 0; filac < filas; filac++) {
+        for (int fila = 0; fila < matriz.length; fila++) {
 
-            for (int columna = 0; columna < columnas; columna++) {
+            for (int columna = 0; columna < matriz[fila].length; columna++) {
 
-                System.out.print(matriz[filac][columna] + "   ");
+                System.out.print(matriz[fila][columna] + "   ");
 
             }
 

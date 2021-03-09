@@ -24,11 +24,12 @@ public class Ejercicio2 {
 
         int[] primeraColumna = new int[filasYColumnas];
         int[] ultimaColumna = new int[filasYColumnas];
+
         int[] primeraFila = new int[filasYColumnas - 2];
         int[] ultimaFila = new int[filasYColumnas - 2];
+
         int[] diagonalIzquierda;
         int[] diagonalDerecha;
-        int[] centro = {0};
         if (filasYColumnas % 2 == 0) {
             diagonalIzquierda = new int[filasYColumnas / 2 - 1];
             diagonalDerecha = new int[filasYColumnas / 2 - 1];
@@ -36,6 +37,8 @@ public class Ejercicio2 {
             diagonalIzquierda = new int[(int) ((filasYColumnas / 2) - 0.5)];
             diagonalDerecha = new int[(int) ((filasYColumnas / 2) - 0.5)];
         }
+
+        int[] centro = {0};
 
         System.out.println("------------------------------------------------");
         System.out.println("MATRIZ");

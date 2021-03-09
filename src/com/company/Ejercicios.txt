@@ -1,0 +1,7 @@
+Ejercicios:
+
+1. Dada una matriz de f*c, ordenarla por cada fila y por cada columna.
+
+2. Dada una matriz cuadrada de n*n. mostrar y sumar los datos que que forman la letra O y la letra M, sin repertirlos.
+
+3. Dada una matriz de f*c, obtener cuántos datos son positivos por columnas y mostrar qué dato es el menor por columna.

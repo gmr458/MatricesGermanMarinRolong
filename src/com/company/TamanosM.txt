@@ -1,0 +1,41 @@
+0 0
+0 0
+
+X - X
+X X X
+X - X
+
+X - - X
+X X X X
+X - - X
+X - - X
+
+X - - - X
+X X - X X
+X - X - X
+X - - - X
+X - - - X
+
+X - - - - X
+X X     X X
+X - X X - X
+X - - - - X
+X - - - - X
+X - - - - x
+
+X - - - - - X
+X X - - - X X
+X - X - X - X
+X - - X - - X
+X - - - - - X
+X - - - - - X
+x - - - - - X
+
+X - - - - - - X
+X X - - - - X X
+X - X - - X - X
+X - - X X - - X
+X - - - - - - X
+X - - - - - - X
+x - - - - - - X
+x - - - - - - X
