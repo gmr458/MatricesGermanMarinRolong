@@ -1,4 +1,4 @@
-package com.company;
+//package com.company;
 
 import java.util.Random;
 import java.util.Scanner;
@@ -57,7 +57,6 @@ public class Main {
 
         // En las siguiente lineas se calcula la fila con mayor valor y cual es su valor
         int valorFilaMayor = 0;
-        int filaMayor = 0;
 
         for (int i = 0; i < vectorSumaFilas.length; i++) {
 
@@ -65,7 +64,33 @@ public class Main {
 
                 valorFilaMayor = vectorSumaFilas[i];
 
-                filaMayor = i;
+            }
+
+        }
+
+        int cantValorFilaMayor = 0;
+
+        for (int i = 0; i < vectorSumaFilas.length; i++) {
+
+            if (vectorSumaFilas[i] == valorFilaMayor) {
+
+                cantValorFilaMayor += 1;
+
+            }
+
+        }
+
+        int[] posicionesValorFilaMayor = new int[cantValorFilaMayor];
+
+        int k = 0;
+
+        for (int j = 0; j < vectorSumaFilas.length; j++) {
+
+            if (vectorSumaFilas[j] == valorFilaMayor) {
+
+                posicionesValorFilaMayor[k] = j;
+
+                k++;
 
             }
 
@@ -83,7 +108,25 @@ public class Main {
 
         System.out.println("------------------------------------------------");
 
-        System.out.println("La fila mas alta fue la fila " + filaMayor + " con valor de " + valorFilaMayor);
+        if (posicionesValorFilaMayor.length == 1) {
+
+            for (int i = 0; i < posicionesValorFilaMayor.length; i++) {
+
+                System.out.println("La fila mas alta fue la fila " + posicionesValorFilaMayor[i] + " con valor de " + valorFilaMayor);
+
+            }
+
+        } else if (posicionesValorFilaMayor.length > 1) {
+
+            System.out.println("Las filas mas altas fueron:");
+
+            for (int i = 0; i < posicionesValorFilaMayor.length; i++) {
+
+                System.out.println("Fila " + posicionesValorFilaMayor[i] + " con valor de " + valorFilaMayor);
+
+            }
+
+        }
 
         System.out.println("------------------------------------------------");
 
