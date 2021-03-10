@@ -263,56 +263,6 @@ public class Ejercicio2 {
             }
         }
 
-        /*for (int valor : primeraColumna) {
-            System.out.println("Primera columna -> " + valor);
-        }
-
-        System.out.println("----------------------------------------");
-
-        for (int valor : ultimaColumna) {
-            System.out.println("Ultima columna -> " + valor);
-        }
-
-        System.out.println("----------------------------------------");
-
-        for (int valor : primeraFila) {
-            System.out.println("Primera fila -> " + valor);
-        }
-
-        System.out.println("----------------------------------------");
-
-        for (int valor : ultimaFila) {
-            System.out.println("Ultima fila -> " + valor);
-        }
-
-        System.out.println("----------------------------------------");
-
-        for (int valor : diagonalIzquierda) {
-            System.out.println("Diagonal izquierda -> " + valor);
-        }
-
-        System.out.println("----------------------------------------");
-
-        for (int valor : diagonalDerecha) {
-            System.out.println("Diagonal derecha -> " + valor);
-        }
-
-        System.out.println("----------------------------------------");
-
-        System.out.println("Centro -> " + centro[0]);
-
-        System.out.println("----------------------------------------");
-
-        for (int valor : todosNumeros) {
-            System.out.println("Todos Numeros M -> " + valor);
-        }
-
-        System.out.println("----------------------------------------");
-
-        for (int valor : todosNumerosO) {
-            System.out.println("Todos Numeros O -> " + valor);
-        }*/
-
         System.out.println("------------------------------------------------------");
 
         System.out.println("SUMA DE LOS VALORES QUE FORMAN UNA M SIN REPETIRSE: " + suma);
