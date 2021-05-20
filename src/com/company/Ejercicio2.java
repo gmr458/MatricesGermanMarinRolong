@@ -131,7 +131,7 @@ public class Ejercicio2 {
 
             }
 
-        } else {
+        } else { // Capturar diagonal izquierda y derecha si filasYColumnas es impar
 
             for (int columna = 1; columna <= (int) (filasYColumnas / 2 - 0.5); columna++) {
 
@@ -170,42 +170,42 @@ public class Ejercicio2 {
 
         }
 
-        for (int b = 0; b < ultimaColumna.length; b++) {
-            todosNumeros[a] = ultimaColumna[b];
+        for (int elementoUltimaColumna : ultimaColumna) {
+            todosNumeros[a] = elementoUltimaColumna;
             a++;
         }
 
-        for (int c = 0; c < diagonalDerecha.length; c++) {
-            todosNumeros[a] = diagonalDerecha[c];
+        for (int elementoDiagonalDerecha : diagonalDerecha) {
+            todosNumeros[a] = elementoDiagonalDerecha;
             a++;
         }
 
-        for (int d = 0; d < diagonalIzquierda.length; d++) {
-            todosNumeros[a] = diagonalIzquierda[d];
+        for (int elementoDiagonalIzquierda : diagonalIzquierda) {
+            todosNumeros[a] = elementoDiagonalIzquierda;
             a++;
         }
 
         todosNumeros[a] = centro[0];
 
-        // Llenando al letra O
+        // Llenando la letra O
         int z;
         for (z = 0; z < primeraColumna.length; z++) {
             todosNumerosO[z] = primeraColumna[z];
 
         }
 
-        for (int b = 0; b < ultimaColumna.length; b++) {
-            todosNumerosO[z] = ultimaColumna[b];
+        for (int elementoUltimaColumna : ultimaColumna) {
+            todosNumerosO[z] = elementoUltimaColumna;
             z++;
         }
 
-        for (int c = 0; c < primeraFila.length; c++) {
-            todosNumerosO[z] = primeraFila[c];
+        for (int elementoPrimeraFila : primeraFila) {
+            todosNumerosO[z] = elementoPrimeraFila;
             z++;
         }
 
-        for (int d = 0; d < ultimaFila.length; d++) {
-            todosNumerosO[z] = ultimaFila[d];
+        for (int elementoUltimaFila : ultimaFila) {
+            todosNumerosO[z] = elementoUltimaFila;
             z++;
         }
 
