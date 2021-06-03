@@ -5,6 +5,107 @@ import java.util.Scanner;
 
 public class Ejercicio2 {
 
+    public static int obtenerNumeroPorConsola() {
+        Scanner scanner = new Scanner(System.in);
+        return scanner.nextInt();
+    }
+
+    public static int[][] crearMatrizYLlenarla(int cantidadDeFilas, int cantidadDeColumnas) {
+        int[][] matriz = new int[cantidadDeFilas][cantidadDeColumnas];
+        Random random = new Random();
+        for (int fila = 0; fila < cantidadDeFilas; fila++) {
+            for (int columna = 0; columna < cantidadDeColumnas; columna++) {
+                int numeroAleatorio = random.nextInt(10);
+                matriz[fila][columna] = numeroAleatorio;
+            }
+        }
+        return matriz;
+    }
+
+    public static void imprimirMatriz(int[][] matriz) {
+        int cantidadDeFilas = matriz.length;
+        int cantidadDeColumnas = matriz[0].length;
+        System.out.println("\nMatriz de " + cantidadDeFilas + " filas y " + cantidadDeColumnas + " columnas:");
+        for (int fila = 0; fila < cantidadDeFilas; fila++) {
+            for (int columna = 0; columna < cantidadDeColumnas; columna++) {
+                System.out.print(matriz[fila][columna] + "   ");
+            }
+            System.out.println();
+        }
+    }
+
+    public static int[] capturarPrimeraColumna(int[][] matriz) {
+        int cantidadDeFilasYColumnas = matriz.length;
+        int[] primeraColumna = new int[cantidadDeFilasYColumnas];
+        for (int fila = 0; fila < cantidadDeFilasYColumnas;  fila++) {
+            for (int columna = 0; columna < cantidadDeFilasYColumnas; columna++) {
+                if (columna == 0) {
+                    primeraColumna[fila] = matriz[fila][columna];
+                }
+            }
+        }
+        return primeraColumna;
+    }
+
+    public static int[] capturarUltimaColumna(int[][] matriz) {
+        int cantidadDeFilasYColumnas = matriz.length;
+        int[] ultimaColumna = new int[cantidadDeFilasYColumnas];
+        for (int fila = 0; fila < cantidadDeFilasYColumnas;  fila++) {
+            for (int columna = 0; columna < cantidadDeFilasYColumnas; columna++) {
+                if (columna == cantidadDeFilasYColumnas - 1) {
+                    ultimaColumna[fila] = matriz[fila][columna];
+                }
+            }
+        }
+        return ultimaColumna;
+    }
+
+    public static int[] capturarPrimeraFila(int[][] matriz) {
+        int cantidadDeFilasYColumnas = matriz.length;
+        int[] primeraFila = new int[cantidadDeFilasYColumnas - 2];
+        int posicionPrimeraFila = 0;
+        for (int fila = 0; fila < 1; fila++) {
+            for (int columna = 1; columna <= cantidadDeFilasYColumnas - 2; columna++) {
+                primeraFila[posicionPrimeraFila] = matriz[fila][columna];
+                posicionPrimeraFila++;
+            }
+        }
+        return primeraFila;
+    }
+
+    public static int[] capturarUltimaFila(int[][] matriz) {
+        int cantidadDeFilasYColumnas = matriz.length;
+        int[] ultimaFila = new int[cantidadDeFilasYColumnas - 2];
+        int posicionUltimaFila = 0;
+        for (int fila = cantidadDeFilasYColumnas - 1; fila < cantidadDeFilasYColumnas; fila++) {
+            for (int columna = 1; columna <= cantidadDeFilasYColumnas - 2; columna++) {
+                ultimaFila[posicionUltimaFila] = matriz[fila][columna];
+                posicionUltimaFila++;
+            }
+        }
+        return ultimaFila;
+    }
+
+    public static int[] capturarDiagonalIzquierda(int[][] matriz) {
+        int cantidadDeFilasYColumnas = matriz.length;
+        int[] diagonalIzquierda;
+        int fila = 1;
+        if (cantidadDeFilasYColumnas % 2 == 0) { // Capturar diagonal izquierda y derecha si cantidadDeFilasYColumnas es par
+            diagonalIzquierda = new int[cantidadDeFilasYColumnas / 2 - 1];
+            for (int columna = 1; columna < cantidadDeFilasYColumnas / 2; columna++) {
+                diagonalIzquierda[fila - 1] = matriz[fila][columna];
+                fila++;
+            }
+        } else { // Capturar diagonal izquierda y derecha si cantidadDeFilasYColumnas es impar
+            diagonalIzquierda = new int[(int) ((cantidadDeFilasYColumnas / 2) - 0.5)];
+            for (int columna = 1; columna <= (int) (cantidadDeFilasYColumnas / 2 - 0.5); columna++) {
+                diagonalIzquierda[fila - 1] = matriz[fila][columna];
+                fila++;
+            }
+        }
+        return diagonalIzquierda;
+    }
+
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
